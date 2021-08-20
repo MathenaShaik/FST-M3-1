@@ -1,0 +1,168 @@
+xml version=1.0 encoding=UTF-8
+jmeterTestPlan version=1.2 properties=5.0 jmeter=5.4.1
+  hashTree
+    TestPlan guiclass=TestPlanGui testclass=TestPlan testname=Test Plan enabled=true
+      stringProp name=TestPlan.commentsstringProp
+      boolProp name=TestPlan.functional_modefalseboolProp
+      boolProp name=TestPlan.serialize_threadgroupsfalseboolProp
+      elementProp name=TestPlan.user_defined_variables elementType=Arguments guiclass=ArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+        collectionProp name=Arguments.arguments
+      elementProp
+      stringProp name=TestPlan.user_define_classpathstringProp
+    TestPlan
+    hashTree
+      Arguments guiclass=ArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+        collectionProp name=Arguments.arguments
+          elementProp name=host elementType=Argument
+            stringProp name=Argument.namehoststringProp
+            stringProp name=Argument.valuehttplocalhost3000stringProp
+            stringProp name=Argument.metadata=stringProp
+          elementProp
+          elementProp name=scheme elementType=Argument
+            stringProp name=Argument.nameschemestringProp
+            stringProp name=Argument.valuehttpsstringProp
+            stringProp name=Argument.metadata=stringProp
+          elementProp
+        collectionProp
+      Arguments
+      hashTree
+      ConfigTestElement guiclass=HttpDefaultsGui testclass=ConfigTestElement testname=HTTP Request Defaults enabled=true
+        elementProp name=HTTPsampler.Arguments elementType=Arguments guiclass=HTTPArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+          collectionProp name=Arguments.arguments
+        elementProp
+        stringProp name=HTTPSampler.domainlocalhoststringProp
+        stringProp name=HTTPSampler.port3000stringProp
+        stringProp name=HTTPSampler.protocolhttpstringProp
+        stringProp name=HTTPSampler.contentEncodingstringProp
+        stringProp name=HTTPSampler.pathstringProp
+        stringProp name=HTTPSampler.concurrentPool6stringProp
+        stringProp name=HTTPSampler.connect_timeoutstringProp
+        stringProp name=HTTPSampler.response_timeoutstringProp
+      ConfigTestElement
+      hashTree
+      CookieManager guiclass=CookiePanel testclass=CookieManager testname=HTTP Cookie Manager enabled=true
+        collectionProp name=CookieManager.cookies
+        boolProp name=CookieManager.clearEachIterationfalseboolProp
+        boolProp name=CookieManager.controlledByThreadGroupfalseboolProp
+      CookieManager
+      hashTree
+      ThreadGroup guiclass=ThreadGroupGui testclass=ThreadGroup testname=Thread Group enabled=true
+        stringProp name=ThreadGroup.on_sample_errorcontinuestringProp
+        elementProp name=ThreadGroup.main_controller elementType=LoopController guiclass=LoopControlPanel testclass=LoopController testname=Loop Controller enabled=true
+          boolProp name=LoopController.continue_foreverfalseboolProp
+          stringProp name=LoopController.loops1stringProp
+        elementProp
+        stringProp name=ThreadGroup.num_threads5stringProp
+        stringProp name=ThreadGroup.ramp_time5stringProp
+        longProp name=ThreadGroup.start_time1370726934000longProp
+        longProp name=ThreadGroup.end_time1370726934000longProp
+        boolProp name=ThreadGroup.schedulerfalseboolProp
+        stringProp name=ThreadGroup.durationstringProp
+        stringProp name=ThreadGroup.delaystringProp
+        boolProp name=ThreadGroup.same_user_on_next_iterationtrueboolProp
+      ThreadGroup
+      hashTree
+        HTTPSamplerProxy guiclass=HttpTestSampleGui testclass=HTTPSamplerProxy testname=Get enabled=true
+          elementProp name=HTTPsampler.Arguments elementType=Arguments guiclass=HTTPArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+            collectionProp name=Arguments.arguments
+          elementProp
+          stringProp name=HTTPSampler.domainstringProp
+          stringProp name=HTTPSampler.portstringProp
+          stringProp name=HTTPSampler.protocolstringProp
+          stringProp name=HTTPSampler.contentEncodingstringProp
+          stringProp name=HTTPSampler.pathstringProp
+          stringProp name=HTTPSampler.methodGETstringProp
+          boolProp name=HTTPSampler.follow_redirectstrueboolProp
+          boolProp name=HTTPSampler.auto_redirectsfalseboolProp
+          boolProp name=HTTPSampler.use_keepalivetrueboolProp
+          boolProp name=HTTPSampler.DO_MULTIPART_POSTfalseboolProp
+          stringProp name=HTTPSampler.embedded_url_restringProp
+          stringProp name=HTTPSampler.connect_timeoutstringProp
+          stringProp name=HTTPSampler.response_timeoutstringProp
+        HTTPSamplerProxy
+        hashTree
+        HTTPSamplerProxy guiclass=HttpTestSampleGui testclass=HTTPSamplerProxy testname=GetHealthCheck enabled=true
+          elementProp name=HTTPsampler.Arguments elementType=Arguments guiclass=HTTPArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+            collectionProp name=Arguments.arguments
+          elementProp
+          stringProp name=HTTPSampler.domainstringProp
+          stringProp name=HTTPSampler.portstringProp
+          stringProp name=HTTPSampler.protocolstringProp
+          stringProp name=HTTPSampler.contentEncodingstringProp
+          stringProp name=HTTPSampler.pathhealth_checkstringProp
+          stringProp name=HTTPSampler.methodGETstringProp
+          boolProp name=HTTPSampler.follow_redirectstrueboolProp
+          boolProp name=HTTPSampler.auto_redirectsfalseboolProp
+          boolProp name=HTTPSampler.use_keepalivetrueboolProp
+          boolProp name=HTTPSampler.DO_MULTIPART_POSTfalseboolProp
+          stringProp name=HTTPSampler.embedded_url_restringProp
+          stringProp name=HTTPSampler.connect_timeoutstringProp
+          stringProp name=HTTPSampler.response_timeoutstringProp
+        HTTPSamplerProxy
+        hashTree
+        HTTPSamplerProxy guiclass=HttpTestSampleGui testclass=HTTPSamplerProxy testname=GetPosts enabled=true
+          elementProp name=HTTPsampler.Arguments elementType=Arguments guiclass=HTTPArgumentsPanel testclass=Arguments testname=User Defined Variables enabled=true
+            collectionProp name=Arguments.arguments
+          elementProp
+          stringProp name=HTTPSampler.domainstringProp
+          stringProp name=HTTPSampler.portstringProp
+          stringProp name=HTTPSampler.protocolstringProp
+          stringProp name=HTTPSampler.contentEncodingstringProp
+          stringProp name=HTTPSampler.pathpostsstringProp
+          stringProp name=HTTPSampler.methodGETstringProp
+          boolProp name=HTTPSampler.follow_redirectstrueboolProp
+          boolProp name=HTTPSampler.auto_redirectsfalseboolProp
+          boolProp name=HTTPSampler.use_keepalivetrueboolProp
+          boolProp name=HTTPSampler.DO_MULTIPART_POSTfalseboolProp
+          stringProp name=HTTPSampler.embedded_url_restringProp
+          stringProp name=HTTPSampler.connect_timeoutstringProp
+          stringProp name=HTTPSampler.response_timeoutstringProp
+        HTTPSamplerProxy
+        hashTree
+        ResponseAssertion guiclass=AssertionGui testclass=ResponseAssertion testname=Response Assertion enabled=true
+          collectionProp name=Asserion.test_strings
+          stringProp name=Assertion.custom_message200stringProp
+          stringProp name=Assertion.test_fieldAssertion.response_codestringProp
+          boolProp name=Assertion.assume_successfalseboolProp
+          intProp name=Assertion.test_type2intProp
+        ResponseAssertion
+        hashTree
+        ResultCollector guiclass=ViewResultsFullVisualizer testclass=ResultCollector testname=View Results Tree enabled=true
+          boolProp name=ResultCollector.error_loggingfalseboolProp
+          objProp
+            namesaveConfigname
+            value class=SampleSaveConfiguration
+              timetruetime
+              latencytruelatency
+              timestamptruetimestamp
+              successtruesuccess
+              labeltruelabel
+              codetruecode
+              messagetruemessage
+              threadNametruethreadName
+              dataTypefalsedataType
+              encodingfalseencoding
+              assertionstrueassertions
+              subresultsfalsesubresults
+              responseDatafalseresponseData
+              samplerDatafalsesamplerData
+              xmlfalsexml
+              fieldNamestruefieldNames
+              responseHeadersfalseresponseHeaders
+              requestHeadersfalserequestHeaders
+              responseDataOnErrortrueresponseDataOnError
+              saveAssertionResultsFailureMessagetruesaveAssertionResultsFailureMessage
+              assertionsResultsToSave0assertionsResultsToSave
+              bytestruebytes
+              hostnametruehostname
+              threadCountstruethreadCounts
+              sampleCounttruesampleCount
+            value
+          objProp
+          stringProp name=filenamestringProp
+        ResultCollector
+        hashTree
+      hashTree
+    hashTree
+  hashTree
+jmeterTestPlan
